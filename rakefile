@@ -1,0 +1,5 @@
+puts "Welcome to Rake!"
+
+task :default do
+  puts "hello world"
+end
