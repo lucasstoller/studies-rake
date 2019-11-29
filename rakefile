@@ -1,5 +1,42 @@
 puts "Welcome to Rake!"
+puts "----------------"
 
 task :default do
   puts "hello world"
+end
+
+task :go_to_work => [:take_bus, :take_train_to_luz, :take_train_metro_integration, :take_metro_to_pinheiros, :take_metro_train_integration, :take_train_to_berrini, :walk_to_creditas] do
+  puts "yey! Work time!"
+end
+
+task :take_bus => [:take_transport_pass] do
+  puts "Taking a bus from Home to Guainases CPTM Station"
+end
+
+task :take_train_to_luz => [:take_transport_pass] do
+  puts "Taking the 7 - Coral CPTM line to Luz Station"
+end
+
+task :take_train_metro_integration do
+  puts "Taking the Train/Metro free intregation in Luz Station"
+end
+
+task :take_metro_to_pinheiros do
+  puts "Taking the 1 - Yellow Metro line to Luz Pinheiros Station"
+end
+
+task :take_metro_train_integration do
+  puts "Taking the Metro/Train free intregation in Pinheiros Station"
+end
+
+task :take_train_to_berrini => [:take_transport_pass] do
+  puts "Taking the 9 - Esmerald CPTM line to Berrini Station"
+end
+
+task :walk_to_creditas do
+  puts "Walking to Creditas"
+end
+
+task :take_transport_pass do
+  puts "Finding Bilhete único in the backpack... Nice!"
 end
