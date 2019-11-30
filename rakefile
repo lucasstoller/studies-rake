@@ -1,14 +1,15 @@
-puts "Welcome to Rake!"
-puts "----------------"
+puts "rakefile here!"
 
 task :default do
   puts "Hello World. Default task here!"
 end
 
+desc "Go to work"
 task :go_to_work => [:take_bus, :take_train_to_luz, :take_train_metro_integration, :take_metro_to_pinheiros, :take_metro_train_integration, :take_train_to_berrini, :walk_to_creditas] do
   puts "yey! Work time!"
 end
 
+desc "First step of route"
 task :take_bus => [:take_transport_pass] do
   puts "Taking a bus from Home to Guainases CPTM Station"
 end
